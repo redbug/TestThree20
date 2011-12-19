@@ -37,11 +37,6 @@
 		507A953B1498A543003C7155 /* FirstVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 507A953A1498A543003C7155 /* FirstVC.m */; };
 		507A953D1498A708003C7155 /* FirstVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 507A953C1498A708003C7155 /* FirstVC.xib */; };
 		507A95551498B94F003C7155 /* SecondVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 507A95531498B94F003C7155 /* SecondVC.m */; };
-		507A960E1499A89F003C7155 /* alan.png in Resources */ = {isa = PBXBuildFile; fileRef = 507A96091499A89E003C7155 /* alan.png */; };
-		507A960F1499A89F003C7155 /* bamboo.png in Resources */ = {isa = PBXBuildFile; fileRef = 507A960A1499A89E003C7155 /* bamboo.png */; };
-		507A96101499A89F003C7155 /* ben.png in Resources */ = {isa = PBXBuildFile; fileRef = 507A960B1499A89E003C7155 /* ben.png */; };
-		507A96111499A89F003C7155 /* brendon.png in Resources */ = {isa = PBXBuildFile; fileRef = 507A960C1499A89F003C7155 /* brendon.png */; };
-		507A96121499A89F003C7155 /* edi.png in Resources */ = {isa = PBXBuildFile; fileRef = 507A960D1499A89F003C7155 /* edi.png */; };
 		509879F5149C8D8D00C8E442 /* GuluContactModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 509879F4149C8D8D00C8E442 /* GuluContactModel.m */; };
 		50A20C2C149AEF0E00912F83 /* DCFbLoginManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 50A20C2B149AEF0E00912F83 /* DCFbLoginManager.m */; };
 		50B8BC85149F262D002841A5 /* Three20.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 50B8BC84149F262D002841A5 /* Three20.bundle */; };
@@ -274,11 +269,6 @@
 		507A953C1498A708003C7155 /* FirstVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FirstVC.xib; sourceTree = "<group>"; };
 		507A95521498B94F003C7155 /* SecondVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SecondVC.h; sourceTree = "<group>"; };
 		507A95531498B94F003C7155 /* SecondVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SecondVC.m; sourceTree = "<group>"; };
-		507A96091499A89E003C7155 /* alan.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = alan.png; path = ../../../../Desktop/Images/icons/alan.png; sourceTree = "<group>"; };
-		507A960A1499A89E003C7155 /* bamboo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = bamboo.png; path = ../../../../Desktop/Images/icons/bamboo.png; sourceTree = "<group>"; };
-		507A960B1499A89E003C7155 /* ben.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = ben.png; path = ../../../../Desktop/Images/icons/ben.png; sourceTree = "<group>"; };
-		507A960C1499A89F003C7155 /* brendon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = brendon.png; path = ../../../../Desktop/Images/icons/brendon.png; sourceTree = "<group>"; };
-		507A960D1499A89F003C7155 /* edi.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = edi.png; path = ../../../../Desktop/Images/icons/edi.png; sourceTree = "<group>"; };
 		509879F3149C8D8D00C8E442 /* GuluContactModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GuluContactModel.h; path = Model/GuluContactModel.h; sourceTree = "<group>"; };
 		509879F4149C8D8D00C8E442 /* GuluContactModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GuluContactModel.m; path = Model/GuluContactModel.m; sourceTree = "<group>"; };
 		50A20C2A149AEF0E00912F83 /* DCFbLoginManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DCFbLoginManager.h; sourceTree = "<group>"; };
@@ -443,7 +433,6 @@
 			children = (
 				50B8BC84149F262D002841A5 /* Three20.bundle */,
 				50FE630A149CAC7600309363 /* project_papper.png */,
-				507A96131499A8A3003C7155 /* icons */,
 				507A941A149891CD003C7155 /* testThree20-Info.plist */,
 				507A941B149891CD003C7155 /* InfoPlist.strings */,
 				507A941E149891CD003C7155 /* main.m */,
@@ -513,18 +502,6 @@
 				507A94C61498925E003C7155 /* UIUnitTests.octest */,
 			);
 			name = Products;
-			sourceTree = "<group>";
-		};
-		507A96131499A8A3003C7155 /* icons */ = {
-			isa = PBXGroup;
-			children = (
-				507A96091499A89E003C7155 /* alan.png */,
-				507A960A1499A89E003C7155 /* bamboo.png */,
-				507A960B1499A89E003C7155 /* ben.png */,
-				507A960C1499A89F003C7155 /* brendon.png */,
-				507A960D1499A89F003C7155 /* edi.png */,
-			);
-			name = icons;
 			sourceTree = "<group>";
 		};
 		509879F2149C8D5F00C8E442 /* Model */ = {
@@ -769,11 +746,6 @@
 			files = (
 				507A941D149891CD003C7155 /* InfoPlist.strings in Resources */,
 				507A953D1498A708003C7155 /* FirstVC.xib in Resources */,
-				507A960E1499A89F003C7155 /* alan.png in Resources */,
-				507A960F1499A89F003C7155 /* bamboo.png in Resources */,
-				507A96101499A89F003C7155 /* ben.png in Resources */,
-				507A96111499A89F003C7155 /* brendon.png in Resources */,
-				507A96121499A89F003C7155 /* edi.png in Resources */,
 				506E87D5149B2BB80068ABBD /* .gitignore in Resources */,
 				506E87D6149B2BB80068ABBD /* README.mdown in Resources */,
 				506E87EA149B2BB80068ABBD /* FBDialog.bundle in Resources */,

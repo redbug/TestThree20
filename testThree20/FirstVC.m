@@ -43,6 +43,7 @@
     DCFbLoginManager *loginManager = [DCFbLoginManager sharedManager];
     loginManager.fbSsoDelegate = self;
     [loginManager invokeFacebbokSSOWithSuffix:APP_SUFFIX];
+    [SVProgressHUD showWithStatus:@"Logging..."];
 }
 
 - (IBAction)gotoSecondView:(id)sender
@@ -101,6 +102,8 @@
         URLRequestFactory *urlRequestFactory = [URLRequestFactory sharedFactory];
         
         urlRequestFactory.sessionKey = sessionKey;
+        
+        [SVProgressHUD dismiss];
         
         NSLog(@"user id:%@", _uid);
         NSLog(@"session key:%@", sessionKey);    

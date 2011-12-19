@@ -39,7 +39,7 @@
 					<object class="IBUIButton" id="134384028">
 						<reference key="NSNextResponder" ref="191373211"/>
 						<int key="NSvFlags">292</int>
-						<string key="NSFrame">{{75, 226}, {139, 37}}</string>
+						<string key="NSFrame">{{37, 226}, {216, 37}}</string>
 						<reference key="NSSuperview" ref="191373211"/>
 						<reference key="NSWindow"/>
 						<reference key="NSNextKeyView" ref="200650684"/>
@@ -49,7 +49,7 @@
 						<int key="IBUIContentHorizontalAlignment">0</int>
 						<int key="IBUIContentVerticalAlignment">0</int>
 						<int key="IBUIButtonType">1</int>
-						<string key="IBUINormalTitle">go to second vc</string>
+						<string key="IBUINormalTitle">TTLauncherViewController</string>
 						<object class="NSColor" key="IBUIHighlightedTitleColor" id="848337971">
 							<int key="NSColorSpace">3</int>
 							<bytes key="NSWhite">MQA</bytes>
@@ -75,7 +75,7 @@
 					<object class="IBUILabel" id="663252703">
 						<reference key="NSNextResponder" ref="191373211"/>
 						<int key="NSvFlags">292</int>
-						<string key="NSFrame">{{107, 151}, {75, 21}}</string>
+						<string key="NSFrame">{{108, 99}, {75, 21}}</string>
 						<reference key="NSSuperview" ref="191373211"/>
 						<reference key="NSWindow"/>
 						<reference key="NSNextKeyView" ref="536206116"/>
@@ -129,7 +129,7 @@
 					<object class="IBUIButton" id="536206116">
 						<reference key="NSNextResponder" ref="191373211"/>
 						<int key="NSvFlags">292</int>
-						<string key="NSFrame">{{75, 181}, {139, 37}}</string>
+						<string key="NSFrame">{{51, 181}, {188, 37}}</string>
 						<reference key="NSSuperview" ref="191373211"/>
 						<reference key="NSWindow"/>
 						<reference key="NSNextKeyView" ref="134384028"/>
@@ -139,7 +139,7 @@
 						<int key="IBUIContentHorizontalAlignment">0</int>
 						<int key="IBUIContentVerticalAlignment">0</int>
 						<int key="IBUIButtonType">1</int>
-						<string key="IBUINormalTitle">go to third vc</string>
+						<string key="IBUINormalTitle">TTTableViewController</string>
 						<reference key="IBUIHighlightedTitleColor" ref="848337971"/>
 						<object class="NSColor" key="IBUINormalTitleColor">
 							<int key="NSColorSpace">1</int>
@@ -185,19 +185,19 @@
 				</object>
 				<object class="IBConnectionRecord">
 					<object class="IBCocoaTouchOutletConnection" key="connection">
-						<string key="label">loginBtn</string>
-						<reference key="source" ref="372490531"/>
-						<reference key="destination" ref="200650684"/>
-					</object>
-					<int key="connectionID">9</int>
-				</object>
-				<object class="IBConnectionRecord">
-					<object class="IBCocoaTouchOutletConnection" key="connection">
 						<string key="label">gotoThirdBtn</string>
 						<reference key="source" ref="372490531"/>
 						<reference key="destination" ref="536206116"/>
 					</object>
 					<int key="connectionID">14</int>
+				</object>
+				<object class="IBConnectionRecord">
+					<object class="IBCocoaTouchOutletConnection" key="connection">
+						<string key="label">loginBtn</string>
+						<reference key="source" ref="372490531"/>
+						<reference key="destination" ref="200650684"/>
+					</object>
+					<int key="connectionID">16</int>
 				</object>
 				<object class="IBConnectionRecord">
 					<object class="IBCocoaTouchEventConnection" key="connection">
@@ -215,7 +215,7 @@
 						<reference key="destination" ref="975951072"/>
 						<int key="IBEventType">7</int>
 					</object>
-					<int key="connectionID">10</int>
+					<int key="connectionID">17</int>
 				</object>
 				<object class="IBConnectionRecord">
 					<object class="IBCocoaTouchEventConnection" key="connection">
@@ -239,10 +239,10 @@
 						<int key="objectID">1</int>
 						<reference key="object" ref="191373211"/>
 						<array class="NSMutableArray" key="children">
-							<reference ref="663252703"/>
 							<reference ref="134384028"/>
 							<reference ref="200650684"/>
 							<reference ref="536206116"/>
+							<reference ref="663252703"/>
 						</array>
 						<reference key="parent" ref="0"/>
 					</object>
@@ -294,7 +294,7 @@
 			<nil key="activeLocalization"/>
 			<dictionary class="NSMutableDictionary" key="localizations"/>
 			<nil key="sourceID"/>
-			<int key="maxID">14</int>
+			<int key="maxID">17</int>
 		</object>
 		<object class="IBClassDescriber" key="IBDocument.Classes">
 			<array class="NSMutableArray" key="referencedPartialClassDescriptions">
@@ -304,6 +304,7 @@
 					<dictionary class="NSMutableDictionary" key="actions">
 						<string key="gotoSecondView:">id</string>
 						<string key="gotoThirdView:">id</string>
+						<string key="loginByFacebook:">id</string>
 					</dictionary>
 					<dictionary class="NSMutableDictionary" key="actionInfosByName">
 						<object class="IBActionInfo" key="gotoSecondView:">
@@ -312,6 +313,10 @@
 						</object>
 						<object class="IBActionInfo" key="gotoThirdView:">
 							<string key="name">gotoThirdView:</string>
+							<string key="candidateClassName">id</string>
+						</object>
+						<object class="IBActionInfo" key="loginByFacebook:">
+							<string key="name">loginByFacebook:</string>
 							<string key="candidateClassName">id</string>
 						</object>
 					</dictionary>

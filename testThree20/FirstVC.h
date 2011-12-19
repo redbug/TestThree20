@@ -18,6 +18,7 @@
 @property (nonatomic, strong)NSString *sessionKey;
 @property (nonatomic, strong)NSString *uid;
 
+- (IBAction)loginByFacebook:(id)sender;
 - (IBAction)gotoSecondView:(id)sender;
 - (IBAction)gotoThirdView:(id)sender;
 @end

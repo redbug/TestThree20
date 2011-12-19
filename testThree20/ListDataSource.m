@@ -38,6 +38,11 @@
         TTTableImageItem *contactItem = [TTTableImageItem itemWithText:[contact getFullName] 
                                                               imageURL:contact.profile_pic
                                                                    URL:nil];
+        TTImageStyle *style = [TTImageStyle styleWithImage:nil 
+                                              defaultImage:nil 
+                                               contentMode:UIViewContentModeScaleAspectFill 
+                                                      size:CGSizeMake(57.f, 57.f) next:nil];
+        contactItem.imageStyle = style;
         [items addObject:contactItem];
     }
     

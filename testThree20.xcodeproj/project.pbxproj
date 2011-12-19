@@ -40,6 +40,9 @@
 		509879F5149C8D8D00C8E442 /* GuluContactModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 509879F4149C8D8D00C8E442 /* GuluContactModel.m */; };
 		50A20C2C149AEF0E00912F83 /* DCFbLoginManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 50A20C2B149AEF0E00912F83 /* DCFbLoginManager.m */; };
 		50B8BC85149F262D002841A5 /* Three20.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 50B8BC84149F262D002841A5 /* Three20.bundle */; };
+		50B8BD46149F2F91002841A5 /* SVProgressHUD.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 50B8BD34149F2F90002841A5 /* SVProgressHUD.bundle */; };
+		50B8BD47149F2F91002841A5 /* SVProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 50B8BD36149F2F90002841A5 /* SVProgressHUD.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		50B8BD48149F2F91002841A5 /* SVProgressHUD.podspec in Resources */ = {isa = PBXBuildFile; fileRef = 50B8BD37149F2F90002841A5 /* SVProgressHUD.podspec */; };
 		50F858CF149DE1E000443E0B /* ListDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 50F858CE149DE1E000443E0B /* ListDataSource.m */; };
 		50FE630B149CAC7600309363 /* project_papper.png in Resources */ = {isa = PBXBuildFile; fileRef = 50FE630A149CAC7600309363 /* project_papper.png */; };
 		50FE630E149CADB100309363 /* CustomizedStyleSheet.m in Sources */ = {isa = PBXBuildFile; fileRef = 50FE630D149CADB100309363 /* CustomizedStyleSheet.m */; };
@@ -276,6 +279,10 @@
 		50A20CC7149AF43200912F83 /* AppSettings.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppSettings.h; sourceTree = "<group>"; };
 		50A20CCC149B113C00912F83 /* API.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = API.h; sourceTree = "<group>"; };
 		50B8BC84149F262D002841A5 /* Three20.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = Three20.bundle; sourceTree = "<group>"; };
+		50B8BD34149F2F90002841A5 /* SVProgressHUD.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = SVProgressHUD.bundle; sourceTree = "<group>"; };
+		50B8BD35149F2F90002841A5 /* SVProgressHUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SVProgressHUD.h; sourceTree = "<group>"; };
+		50B8BD36149F2F90002841A5 /* SVProgressHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SVProgressHUD.m; sourceTree = "<group>"; };
+		50B8BD37149F2F90002841A5 /* SVProgressHUD.podspec */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = SVProgressHUD.podspec; sourceTree = "<group>"; };
 		50DCAE44149B226C00BA8CD3 /* extThree20JSON.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = extThree20JSON.xcodeproj; path = ../three20/src/extThree20JSON/extThree20JSON.xcodeproj; sourceTree = "<group>"; };
 		50F858CD149DE1E000443E0B /* ListDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ListDataSource.h; sourceTree = "<group>"; };
 		50F858CE149DE1E000443E0B /* ListDataSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ListDataSource.m; sourceTree = "<group>"; };
@@ -516,9 +523,29 @@
 		50A20C3C149AF04300912F83 /* Dependencies */ = {
 			isa = PBXGroup;
 			children = (
+				50B8BD1F149F2F90002841A5 /* sv-progress-hud */,
 				506E8779149B2BB80068ABBD /* facebook-ios-sdk */,
 			);
 			path = Dependencies;
+			sourceTree = "<group>";
+		};
+		50B8BD1F149F2F90002841A5 /* sv-progress-hud */ = {
+			isa = PBXGroup;
+			children = (
+				50B8BD33149F2F90002841A5 /* SVProgressHUD */,
+				50B8BD37149F2F90002841A5 /* SVProgressHUD.podspec */,
+			);
+			path = "sv-progress-hud";
+			sourceTree = "<group>";
+		};
+		50B8BD33149F2F90002841A5 /* SVProgressHUD */ = {
+			isa = PBXGroup;
+			children = (
+				50B8BD34149F2F90002841A5 /* SVProgressHUD.bundle */,
+				50B8BD35149F2F90002841A5 /* SVProgressHUD.h */,
+				50B8BD36149F2F90002841A5 /* SVProgressHUD.m */,
+			);
+			path = SVProgressHUD;
 			sourceTree = "<group>";
 		};
 		50DCAE45149B226C00BA8CD3 /* Products */ = {
@@ -751,6 +778,8 @@
 				506E87EA149B2BB80068ABBD /* FBDialog.bundle in Resources */,
 				50FE630B149CAC7600309363 /* project_papper.png in Resources */,
 				50B8BC85149F262D002841A5 /* Three20.bundle in Resources */,
+				50B8BD46149F2F91002841A5 /* SVProgressHUD.bundle in Resources */,
+				50B8BD48149F2F91002841A5 /* SVProgressHUD.podspec in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -782,6 +811,7 @@
 				50FE6314149DCFCA00309363 /* URLRequestModel.m in Sources */,
 				50FE6317149DD28F00309363 /* URLRequestFactory.m in Sources */,
 				50F858CF149DE1E000443E0B /* ListDataSource.m in Sources */,
+				50B8BD47149F2F91002841A5 /* SVProgressHUD.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

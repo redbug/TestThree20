@@ -1,3 +1,6 @@
 [submodule "Dependencies/facebook-ios-sdk"]
 	path = Dependencies/facebook-ios-sdk
 	url = https://github.com/facebook/facebook-ios-sdk.git
+[submodule "Dependencies/sv-progress-hud"]
+	path = Dependencies/sv-progress-hud
+	url = https://github.com/samvermette/SVProgressHUD.git

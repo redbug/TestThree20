@@ -915,7 +915,8 @@
 		507A942D149891CD003C7155 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ALWAYS_SEARCH_USER_PATHS = YES;
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				FRAMEWORK_SEARCH_PATHS = "\"$(SRCROOT)/../three20/src\"/**";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "testThree20/testThree20-Prefix.pch";
 				HEADER_SEARCH_PATHS = (
@@ -936,7 +937,8 @@
 		507A942E149891CD003C7155 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ALWAYS_SEARCH_USER_PATHS = YES;
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				FRAMEWORK_SEARCH_PATHS = "\"$(SRCROOT)/../three20/src\"/**";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "testThree20/testThree20-Prefix.pch";
 				HEADER_SEARCH_PATHS = (

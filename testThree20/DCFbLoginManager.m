@@ -63,7 +63,7 @@ static id _instace = nil;
         [self getFacebookUserID];
     }
     else{
-        [_facebook authorize:[NSArray arrayWithObject:@"offline_access"]];    
+        [_facebook authorize:[NSArray arrayWithObjects:@"offline_access", @"publish_stream", nil]];    
     }
 }
 

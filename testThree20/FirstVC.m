@@ -48,7 +48,17 @@
 
 - (IBAction)gotoSecondView:(id)sender
 {
-    [self requestContacts];
+//    [self requestContacts];
+    
+    TTURLRequest *request = [TTURLRequest requestWithURL:@"http://graph.facebook.com/comments/?ids=http://techcrunch.com/2011/07/22/big-surprise-the-ipad-trumps-android-tablets-at-the-office/" delegate:self];
+    
+    TTURLDataResponse* response = [[TTURLDataResponse alloc] init];
+    request.response = response;
+    request.httpMethod = @"POST";
+    [[request parameters] setObject:_sessionKey forKey:@"access_token"];
+    [[request parameters] setObject:@"hello1234" forKey:@"message"];
+    
+    [request send];
 }
 
 - (IBAction)gotoThirdView:(id)sender
@@ -133,6 +143,18 @@
             
             [[TTNavigator navigator]openURLAction: [[TTURLAction actionWithURLPath:@"my://SecondVC/Redbug"] applyQuery:[NSDictionary dictionaryWithObject:contacts forKey:@"contacts"]]];
         }
+    
+    }
+    
+    else{
+    
+        NSData *respData = [(TTURLDataResponse *)request.response data];
+        NSString *respStr = [[NSString alloc] initWithData:respData encoding:NSASCIIStringEncoding];
+        
+        //TTDPRINT(@"Result %@", respStr);
+        
+        NSDictionary *respDict = [respStr JSONValue];
+        NSLog(@"========================%@", respDict);
     
     }
 }

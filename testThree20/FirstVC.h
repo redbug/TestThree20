@@ -10,9 +10,10 @@
 #import "DCFbLoginManager.h"
 
 @interface FirstVC : UIViewController
-<DCFbSsoDelegate>
+<DCFbSsoDelegate, FBDialogDelegate>
 @property (nonatomic, strong) IBOutlet UIButton *gotoSecondBtn;
 @property (nonatomic, strong) IBOutlet UIButton *gotoThirdBtn;
+@property (nonatomic, strong) IBOutlet UIButton *fbDialog;
 @property (nonatomic, strong) IBOutlet UIButton *loginBtn;
 
 @property (nonatomic, strong)NSString *sessionKey;
@@ -21,4 +22,5 @@
 - (IBAction)loginByFacebook:(id)sender;
 - (IBAction)gotoSecondView:(id)sender;
 - (IBAction)gotoThirdView:(id)sender;
+- (IBAction)popFacebookDialog:(id)sender;
 @end

@@ -11,6 +11,7 @@
 #import "NSString+SBJSON.h"
 #import "GuluContactModel.h"
 #import "URLRequestFactory.h"
+#import "SBJSON.h"
 
 
 @interface FirstVC()
@@ -23,6 +24,7 @@
 
 @synthesize gotoSecondBtn = _gotoSecondBtn;
 @synthesize gotoThirdBtn = _gotoThirdBtn;
+@synthesize fbDialog = _fbDialog;
 @synthesize loginBtn = _loginBtn;
 @synthesize sessionKey = _sessionKey;
 @synthesize uid = _uid;
@@ -38,6 +40,35 @@
     [request send];    
 }
 
+- (IBAction)popFacebookDialog:(id)sender
+{
+    DCFbLoginManager *loginManager = [DCFbLoginManager sharedManager];    
+    
+    
+    SBJSON *jsonWriter = [[SBJSON alloc] init];
+    
+    NSDictionary* actionLinks = [NSArray arrayWithObjects:[NSDictionary 
+                                                           dictionaryWithObjectsAndKeys: @"Always Running",@"text",@"http://itsti.me/",
+                                                           @"href", nil], nil];
+    
+    NSString *actionLinksStr = [jsonWriter stringWithObject:actionLinks];
+    NSDictionary* attachment = [NSDictionary dictionaryWithObjectsAndKeys:
+                                @"a long run", @"name",
+                                @"The Facebook Running app", @"caption",
+                                @"it is fun", @"description",
+                                @"http://itsti.me/", @"href", nil];
+    NSString *attachmentStr = [jsonWriter stringWithObject:attachment];
+    
+    NSMutableDictionary* params = [NSMutableDictionary
+                                   dictionaryWithObjectsAndKeys:
+                                   @"Share on Facebook",  @"user_message_prompt",
+                                   actionLinksStr, @"action_links",
+                                   attachmentStr, @"attachment",
+                                   nil];    
+    
+    [[loginManager facebook] dialog:@"stream.publish" andParams:params andDelegate:self];
+}
+
 - (IBAction)loginByFacebook:(id)sender
 {
     DCFbLoginManager *loginManager = [DCFbLoginManager sharedManager];
@@ -48,17 +79,7 @@
 
 - (IBAction)gotoSecondView:(id)sender
 {
-//    [self requestContacts];
-    
-    TTURLRequest *request = [TTURLRequest requestWithURL:@"http://graph.facebook.com/comments/?ids=http://techcrunch.com/2011/07/22/big-surprise-the-ipad-trumps-android-tablets-at-the-office/" delegate:self];
-    
-    TTURLDataResponse* response = [[TTURLDataResponse alloc] init];
-    request.response = response;
-    request.httpMethod = @"POST";
-    [[request parameters] setObject:_sessionKey forKey:@"access_token"];
-    [[request parameters] setObject:@"hello1234" forKey:@"message"];
-    
-    [request send];
+    [self requestContacts];
 }
 
 - (IBAction)gotoThirdView:(id)sender

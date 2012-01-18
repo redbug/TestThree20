@@ -27,12 +27,12 @@
 
 - (void)load:(TTURLRequestCachePolicy)cachePolicy more:(BOOL)more 
 {
-    TTURLRequest * request = [[URLRequestFactory sharedFactory] createRequestWithApiName:API_GET_FRIEND_LIST delegate:self];
+    _loadingRequest = [[URLRequestFactory sharedFactory] createRequestWithApiName:API_GET_FRIEND_LIST delegate:self];
         
-    request.cachePolicy = cachePolicy;
-    request.cacheExpirationAge = TT_CACHE_EXPIRATION_AGE_NEVER;
-    [[request parameters] setObject:_uid forKey:@"uid"];
-    [request send];
+    _loadingRequest.cachePolicy = cachePolicy;
+    _loadingRequest.cacheExpirationAge = TT_CACHE_EXPIRATION_AGE_NEVER;
+    [[_loadingRequest parameters] setObject:_uid forKey:@"uid"];
+    [_loadingRequest send];
 }
 
 - (void)requestDidFinishLoad:(TTURLRequest*)request {

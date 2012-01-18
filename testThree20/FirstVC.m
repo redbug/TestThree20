@@ -45,28 +45,31 @@
     DCFbLoginManager *loginManager = [DCFbLoginManager sharedManager];    
     
     
-    SBJSON *jsonWriter = [[SBJSON alloc] init];
+//    SBJSON *jsonWriter = [[SBJSON alloc] init];
+//    
+//    NSDictionary* actionLinks = [NSArray arrayWithObjects:[NSDictionary 
+//                                                           dictionaryWithObjectsAndKeys: @"Always Running",@"text",@"http://itsti.me/",
+//                                                           @"href", nil], nil];
+//    
+//    NSString *actionLinksStr = [jsonWriter stringWithObject:actionLinks];
+//    NSDictionary* attachment = [NSDictionary dictionaryWithObjectsAndKeys:
+//                                @"a long run", @"name",
+//                                @"The Facebook Running app", @"caption",
+//                                @"it is fun", @"description",
+//                                @"http://itsti.me/", @"href", nil];
+//    NSString *attachmentStr = [jsonWriter stringWithObject:attachment];
+//    
+//    NSMutableDictionary* params = [NSMutableDictionary
+//                                   dictionaryWithObjectsAndKeys:
+//                                   @"Share on Facebook",  @"user_message_prompt",
+//                                   actionLinksStr, @"action_links",
+//                                   attachmentStr, @"attachment",
+//                                   nil];    
+
+    NSMutableDictionary *params = [NSMutableDictionary dictionaryWithObjectsAndKeys:@"http://www.nccu.edu.tw", @"link",
+                                   @"http://pic.pimg.tw/todo/4a124f35c1758.jpg", @"picture", nil];    
     
-    NSDictionary* actionLinks = [NSArray arrayWithObjects:[NSDictionary 
-                                                           dictionaryWithObjectsAndKeys: @"Always Running",@"text",@"http://itsti.me/",
-                                                           @"href", nil], nil];
-    
-    NSString *actionLinksStr = [jsonWriter stringWithObject:actionLinks];
-    NSDictionary* attachment = [NSDictionary dictionaryWithObjectsAndKeys:
-                                @"a long run", @"name",
-                                @"The Facebook Running app", @"caption",
-                                @"it is fun", @"description",
-                                @"http://itsti.me/", @"href", nil];
-    NSString *attachmentStr = [jsonWriter stringWithObject:attachment];
-    
-    NSMutableDictionary* params = [NSMutableDictionary
-                                   dictionaryWithObjectsAndKeys:
-                                   @"Share on Facebook",  @"user_message_prompt",
-                                   actionLinksStr, @"action_links",
-                                   attachmentStr, @"attachment",
-                                   nil];    
-    
-    [[loginManager facebook] dialog:@"stream.publish" andParams:params andDelegate:self];
+    [[loginManager facebook] dialog:@"feed" andParams:params andDelegate:self];
 }
 
 - (IBAction)loginByFacebook:(id)sender
